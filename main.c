@@ -39,35 +39,28 @@ void quickSort(int array[], int low, int high, int *nswap, int *nif)
     }
 }
 
-void printArray(int array[], int size)
-{
-    for (int i = 0; i < size; ++i)
-    {
-        printf("%d  ", array[i]);
-    }
-    printf("\n");
-}
+
 int main()
  {
     setlocale(LC_ALL,"rus");
     int nswap=0,nif=0,*data,n;
-    printf("Ââåäèòå êîë-âî ýëëåìåíòîâ â ìàññèâå: ");
+    printf("Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ ÃªÃ®Ã«-Ã¢Ã® Ã½Ã«Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã®Ã¢ Ã¢ Ã¬Ã Ã±Ã±Ã¨Ã¢Ã¥: ");
     scanf_s("%d", &n);
     data = (int*)malloc(n * sizeof(int));
-    printf("Ââåäèòå ýëåìåòíòû ìàññèâà: \n");
+    printf("Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã½Ã«Ã¥Ã¬Ã¥Ã²Ã­Ã²Ã» Ã¬Ã Ã±Ã±Ã¨Ã¢Ã : \n");
     for (int i = 0; i < n; i++)
     {
         scanf_s("%d", &data[i]);
     }
 
     quickSort(data, 0, n - 1,&nswap,&nif);
-    printf("Âàø ñîðòèðîâàííûé ìàññèâ:\n");
+    printf("Ã‚Ã Ã¸ Ã±Ã®Ã°Ã²Ã¨Ã°Ã®Ã¢Ã Ã­Ã­Ã»Ã© Ã¬Ã Ã±Ã±Ã¨Ã¢:\n");
     for (int i = 0; i < n; ++i)
     {
         printf("%d  ", data[i]);
     }
     printf("\n");
-    printf("Êîë-âî ïåðåñòàíîâîê: %d\n", nswap);
-    printf("Êîë-âî ñðàâíåíèé: %d", nif);
+    printf("ÃŠÃ®Ã«-Ã¢Ã® Ã¯Ã¥Ã°Ã¥Ã±Ã²Ã Ã­Ã®Ã¢Ã®Ãª: %d\n", nswap);
+    printf("ÃŠÃ®Ã«-Ã¢Ã® Ã±Ã°Ã Ã¢Ã­Ã¥Ã­Ã¨Ã©: %d", nif);
     return 0;
 }
